@@ -1,11 +1,19 @@
 <%- include('partials/header') %>
 
-<h1>Home</h1>
-  <p><%= homeContent %></p>
+<h1 style="background-color: rgb(39, 108, 122); color: white; padding: 0.5%;">Home</h1>
+  <p style="padding-left: 0.5%;"><%= homeContent %></p>
+
+  <% if(postsArr.length===0){ %>
+    <h2 style="padding-left: 0.5%;">No post yet...</h2>
+  <% } %>
+
+  <% if(postsArr.length>0) { %>
+    <h2 style="background-color: rgb(39, 108, 122); color: white; padding: 0.5%;">My Posts</h2>
+  <% } %>
 
   <% for (i = 0; i < postsArr.length; i++) { %>
-    <h1><%= postsArr[i].title %></h1>
-    <p>
+    <h2 style="padding-left: 0.5%; text-decoration: underline;"><%= postsArr[i].title %></h2>
+    <p style="padding-left: 0.5%;">
       <%= postsArr[i].body.substring(0, 100) + " ... " %> 
       <a href="/posts/<%= postsArr[i].title.toLowerCase().replace(/\s+/g, '-') %>">Read More</a>
     </p>

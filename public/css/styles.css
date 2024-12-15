@@ -10,7 +10,9 @@
     margin-bottom: 0;
     font-size: 12px;
     letter-spacing: 5px;
+    background-color: rgb(224, 223, 223);
 }
+
 .navbar-nav  li a:hover {
     color: #1abc9c !important;
 }
@@ -25,7 +27,7 @@
 	bottom: 0;
 	width: 100%;
 	height: 60px;
-	background-color: #1abc9c;
+	background-color: rgb(39, 108, 122);
 }
 
 .footer p {
